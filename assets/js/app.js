@@ -9,10 +9,10 @@ function eventlisteners() {
 //functions
 function newNote(e) {
 	e.preventDefault()
-
 	// access to the value
-	const note = document.querySelector('#note').value
-
+	var note = null
+	let ok = (document.querySelector('#note').value) == '' ?   note = 'داپش کادرت خالیه که':note=document.querySelector('#note').value
+	document.querySelector('#note').value= ''
 	// create remove element
 	const removebtn = document.createElement('a')
 	removebtn.textContent="X"
@@ -29,8 +29,13 @@ function newNote(e) {
 	}
 	//adding li to the note-list
 	noteList.appendChild(li)
+	addLocalStorage()
 }
 let go = document.getElementById('del')
 go.onclick=function() {
 	noteList.remove()
+}
+
+function addLocalStorage(){
+
 }
