@@ -5,6 +5,7 @@ const noteList = document.querySelector('#note-list')
 eventlisteners()
 function eventlisteners() {
 	document.querySelector('#form').addEventListener('submit',newNote)
+
 }
 //functions
 function newNote(e) {
@@ -17,25 +18,37 @@ function newNote(e) {
 	const removebtn = document.createElement('a')
 	removebtn.textContent="X"
 	removebtn.classList='remove-note'
-	
-	// Create tag <li> 
+
+	// Create tag <li>
 	const li =document.createElement('li')
 	li.appendChild(document.createTextNode(note))
-	
+
 	//adding remove button to the li
 	li.appendChild(removebtn)
 	removebtn.onclick= function() {
 		li.remove()
 	}
-	//adding li to the note-list
 	noteList.appendChild(li)
-	addLocalStorage()
-}
-let go = document.getElementById('del')
-go.onclick=function() {
-	noteList.remove()
 }
 
-function addLocalStorage(){
+// function addLocalStorage(){
+// const notes = getlocal()
+// }
+// function getlocal() {
+// 	let notes;
+// 	let getfromLS=localStorage.getItem('notes')
+// 	if(getfromLS===null){
+// 		notes=[]
+// 	}else{
+// 		notes = JSON.parse(getfromLS)
+// 	}
+// 	return notes
+// }
+
+function deall() {
+	Array.prototype.slice.call(document.getElementsByTagName('li')).forEach(
+		function(item) {
+			item.remove();
+		});
 
 }
