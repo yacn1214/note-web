@@ -1,0 +1,29 @@
+*{
+    background: ghostwhite;
+    direction: rtl;
+}
+button{
+    position: relative;
+    top: 5px;
+    border: none;
+    border-radius: 20px !important;
+    float: right;
+}
+
+.remove-note,
+.remove-note:hover {
+    float: left;
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+    text-decoration: none;
+}
+input[type=submit]{
+    position: relative;
+    top: 5px;
+    border: none;
+    border-radius: 5px !important;
+    float: right;
+    background: #86b7fe;
+    color: white !important;
+}

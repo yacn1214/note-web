@@ -1,5 +1,12 @@
 //variable
 const noteList = document.querySelector('#note-list')
+if (document.body.offsetWidth<=240){
+	document.getElementById('div').remove()
+	document.getElementById('row').remove()
+	console.log('rbgufioe')
+}if (document.body.offsetWidth>=240 && document.body.offsetWidth<=500 ){
+
+}
 
 //eventlisteners
 eventlisteners()
@@ -12,7 +19,7 @@ function newNote(e) {
 	e.preventDefault()
 	// access to the value
 	var note = null
-	let ok = (document.querySelector('#note').value) == '' ?   note = 'داپش کادرت خالیه که':note=document.querySelector('#note').value
+	let ok = (document.querySelector('#note').value) == '' ?   note = ' کادرت خالیه که':note=document.querySelector('#note').value
 	document.querySelector('#note').value= ''
 	// create remove element
 	const removebtn = document.createElement('a')

@@ -1,39 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> دفترچه یادداشت </title>
-    <link rel="stylesheet" href="assets/css/normalize.css">
-    <link rel="stylesheet" href="assets/css/skeleton.css">
-    <link rel="stylesheet" href="assets/css/custom.css">
-</head>
-<body>
-<center>
-    <div id="content" style=" margin: 0;">
-        <div class="container">
-<!--            <h1> دفترچه یادداشت با Local Storage</h1>-->
-<!--            <h2>( حافظه مرورگر )</h2>-->
-            <div class="row" >
-                <div class="six columns">
-                    <h4>یادداشت های من</h4>
-                    <button onclick="deall()">delete all</button>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vazir-font/30.1.0/font-face.css" integrity="sha512-ZHFuHiK3EA1uh2tx7nB0j9HyXR/IAFW24KVNFGjY8QIjtDKHmcowjUyObXF40wYrG25+kECHEbH8rL+HbvRwYA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-                    <div id="note-list" style="font-size: 20px"></div>
-                </div>
-                <div class="six columns">
-                    <label for="note" id="label">یادداشت جدید بنویس:</label>
-                    <form action="#" id="form" style="margin: auto">
+
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+<footer class="mt-auto"></footer>
+<center>
+    <div id="content" class="container" style="font-family: Vazir">
+        <div class="row" id="row">
+            <button style="background: #0d6efd;color: white" onclick="deall()" class="fw-lighter">حذف همه</button>
+
+                <!--            <h1> دفترچه یادداشت با Local Storage</h1>-->
+                <!--            <h2>( حافظه مرورگر )</h2>-->
+                <div class="row">
+                    <div class="pt-5 col-6">
+                        <h4 class="container-fluid"> یادداشت های من</h4>
+                        <hr>
+
+                        <div id="note-list" style="font-size: 20px;display: block"></div>
+                    </div>
+    <div class="col-2" id="div"></div>
+                    <div class="col-4">
+                        <hr>
+                        <label for="note" class="container-fluid h3">یادداشت جدید بنویس:</label>
+                        <form action="#" id="form" style="margin: auto">
                             <label for="note"></label>
-                            <textarea id="note" class="u-full-width"></textarea>
-                            <input type="submit" class="button u-full-width button-primary" value="ذخیره یادداشت">
-                    </form>
-                </div> <!--.six-->
-                 <!--.six-->
+                            <textarea id="note" class="container-fluid"></textarea>
+                            <input type="submit" style="font-size: 15px;color: #1a1e21" value="ذخیره یادداشت">
+                        </form>
+                        <hr>
+                    </div> <!--.six-->
+                    <!--.six-->
+                </div>
             </div>
-        </div>
-    </div> <!--#contenido--></center>
-    <script src="assets/js/app.js"></script>
+
+</center>
+</div>
+<script src="assets/js/app.js"></script>
 </body>
 </html>
